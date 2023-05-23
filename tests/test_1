@@ -1,0 +1,32 @@
+{'code':
+  'def test_gpt_agent():
+  # Test 1: Ensure virtual human can respond to basic prompts
+    agent = create_gpt_agent()
+    response = agent.respond("Hello, how are you?")
+    assert response != None
+    assert len(response) > 0
+  # Test 2: Ensure virtual human can handle complex prompts
+    prompt = "You are a scientist working on a top-secret project to develop a new weapon."
+    agent = create_gpt_agent()
+    response = agent.respond(prompt)
+    assert response != None
+    assert len(response) > 0
+  
+  # Test 3: Ensure virtual human can provide helpful information
+    prompt = "What is the capital of France?"
+    agent = create_gpt_agent()
+    response = agent.respond(prompt)
+    assert response != None
+    assert len(response) > 0
+    assert "Paris" in response
+  
+  # Test 4: Ensure virtual human can handle multiple prompts
+    prompts = ["What is your name?", "What is your favorite color?",
+              "What is your favorite food?"]
+    agent = create_gpt_agent()
+    responses = agent.respond_multiple(prompts)
+    assert responses != None
+    assert len(responses) == len(prompts)
+    assert all([len(response) > 0 for response in responses])
+    print("All tests passed!")',
+      'focus': ["improving AI's ability to create virtual humans that can interact with users in a natural and engaging way"]}
